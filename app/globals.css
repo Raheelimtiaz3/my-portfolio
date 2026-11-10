@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: var(--font-outfit), system-ui, -apple-system, sans-serif;
+  --font-body: var(--font-body), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+  
+  --bg-primary: #080808;
+  --bg-secondary: #111111;
+  --accent-copper: #D98245;
+  --accent-gold: #C99A68;
+  --text-main: #F5F2ED;
+  --text-muted: #929292;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D98245;
+}
+
+/* Luxury copper glass blur and borders */
+.copper-border {
+  border: 1px solid rgba(217, 130, 69, 0.18);
+}
+
+.copper-border-hover:hover {
+  border-color: rgba(217, 130, 69, 0.45);
+}
+
+.copper-glow {
+  box-shadow: 0 0 35px -8px rgba(217, 130, 69, 0.25);
+}
+
+.gold-glow {
+  box-shadow: 0 0 30px -10px rgba(201, 154, 104, 0.2);
+}
+
+/* Grain texture overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(217, 130, 69, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Prevent layout shift */
+html {
+  scroll-behavior: smooth;
+}
